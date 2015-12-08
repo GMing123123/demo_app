@@ -4,11 +4,15 @@ DemoApp::Application.routes.draw do
  #get "pages/contact"
  match '/contact',:to=>'pages#contact'
 
-  get "pages/about"
+  #get "pages/about"
+ match '/about',:to=>'pages#about'
+
  #get "pages/help"
   match '/help',:to=>"pages#help"
 
   match '/signup',:to=>'users#new'
+
+  root :to=>'pages#home'
   resources :users
 
 
